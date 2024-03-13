@@ -1,0 +1,68 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+crossorigin=""/>
+<style>
+#map {
+height: 100vh;
+width: 100vw;
+}
+</style>
+</head>
+<body>
+<h2>Visiting Spot in Kolkata and Howrah</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+crossorigin=""/>
+</script>
+<script>
+var map = L.map("map").setView([22.655080, 88.357515], 12);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+attribution:
+'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var marker = L.marker([22.655080, 88.357515]).addTo(map);
+marker.bindPopup("<b>Dakhineswar Temple</b>")
+var circle = L.circle([22.655080, 88.357515], {
+color: "blue",
+fillColor: "#f03",
+fillOpacity: 0.5,  //The fill-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc.) applied to a shape. //
+radius: 200,
+}).addTo(map);
+var marker = L.marker([22.564755, 88.343310]).addTo(map);
+marker.bindPopup("<b>Eden Gardens</b>")
+var circle = L.circle([22.564755, 88.343310], {
+color: "blue",
+fillColor: "#f03",
+fillOpacity: 0.5,
+radius: 200,
+}).addTo(map);
+var marker = L.marker([22.571459, 88.421655]).addTo(map);
+marker.bindPopup("<b>Nicco Park</b>")
+var circle = L.circle([22.571459, 88.421655], {
+color: "blue",
+fillColor: "#f03",
+fillOpacity: 0.5,
+radius: 200,
+}).addTo(map);
+var marker = L.marker([22.632822, 88.356408]).addTo(map);
+marker.bindPopup("<b>Belur Math</b>")
+var circle = L.circle([22.632822, 88.356408], {
+color: "blue",
+fillColor: "#f03",
+fillOpacity: 0.5,
+radius: 200,
+}).addTo(map);
+var marker = L.marker([22.557254, 88.301192]).addTo(map);
+marker.bindPopup("<b>Botanical Garden</b>")
+var circle = L.circle([22.557254, 88.301192], {
+color: "blue",
+fillColor: "#f03",
+fillOpacity: 0.5,
+radius: 200,
+}).addTo(map);
+</script>
+</body>
+</html>
